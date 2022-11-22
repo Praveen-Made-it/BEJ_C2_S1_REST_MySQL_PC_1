@@ -32,4 +32,9 @@ public class ProductController {
     public ResponseEntity<?> getAllProduct() {
         return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
     }
+
+    @DeleteMapping("/product/{productId}")
+    public ResponseEntity<?> deleteProduct(@PathVariable int productId) {
+        return new ResponseEntity<>(productService.deleteProductById(productId), HttpStatus.OK);
+    }
 }
