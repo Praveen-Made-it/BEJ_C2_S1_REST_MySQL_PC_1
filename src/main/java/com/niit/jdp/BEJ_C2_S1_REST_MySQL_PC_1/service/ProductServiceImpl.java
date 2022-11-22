@@ -7,5 +7,24 @@
 
 package com.niit.jdp.BEJ_C2_S1_REST_MySQL_PC_1.service;
 
-public class ProductServiceImpl {
+import com.niit.jdp.BEJ_C2_S1_REST_MySQL_PC_1.domain.Product;
+
+import java.util.List;
+
+public class ProductServiceImpl implements ProductService {
+
+    @Override
+    public Product addProduct(Product product) {
+        return null;
+    }
+
+    @Override
+    public List<Product> getAllProducts() {
+        return null;
+    }
+
+    @Override
+    public boolean deleteProductById(int productId) {
+        return false;
+    }
 }
