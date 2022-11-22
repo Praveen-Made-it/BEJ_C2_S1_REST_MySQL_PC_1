@@ -7,7 +7,12 @@
 
 package com.niit.jdp.BEJ_C2_S1_REST_MySQL_PC_1.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
+    @Id
     private int productId;
     private String productName;
     private String productDescription;
