@@ -9,7 +9,6 @@ package com.niit.jdp.BEJ_C2_S1_REST_MySQL_PC_1.service;
 
 import com.niit.jdp.BEJ_C2_S1_REST_MySQL_PC_1.domain.Product;
 import com.niit.jdp.BEJ_C2_S1_REST_MySQL_PC_1.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +18,7 @@ public class ProductServiceImpl implements ProductService {
 
     ProductRepository productRepository;
 
-    @Autowired
+
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
@@ -31,7 +30,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getAllProducts() {
-        return productRepository.findAll();
+        return (List<Product>) productRepository.findAll();
     }
 
     @Override
